@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Mail, Lock, Eye, EyeOff, LogIn } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link'; // Import Link for navigation
 import styles from './Login.module.css';
 
 const Login: React.FC = () => {
@@ -55,6 +56,11 @@ const Login: React.FC = () => {
             >
               {showPassword ? <Eye className={styles.eyeIcon} /> : <EyeOff className={styles.eyeIcon} />}
             </button>
+          </div>
+          <div className={styles.forgotPasswordContainer}>
+            <Link href="/auth/forgot-password" className={styles.forgotPassword}>
+              Forgot Password?
+            </Link>
           </div>
           <button type="submit" className={styles.loginButton} disabled={!isFormValid}>
             Login <LogIn className={styles.loginIcon} />
