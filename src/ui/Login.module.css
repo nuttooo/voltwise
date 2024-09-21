@@ -1,0 +1,89 @@
+.container {
+    @apply flex items-center justify-center min-h-screen bg-black;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg p-8 shadow-lg text-center w-80 flex flex-col justify-between relative;
+  }
+  
+  .logoContainer {
+    @apply mb-4;
+  }
+  
+  .logo {
+    @apply w-16 mx-auto;
+  }
+  
+  .title {
+    @apply text-2xl font-bold mb-2;
+  }
+  
+  .subtitle {
+    @apply text-gray-600 mb-6;
+  }
+  
+  .form {
+    @apply flex-1 flex flex-col justify-center;
+    margin-bottom: 40px;
+  }
+  
+  .inputContainer {
+    @apply relative mb-6; /* Adjust for more space between inputs */
+  }
+  
+  .label {
+    @apply absolute left-3 text-gray-400 text-sm transition-all transform origin-left pointer-events-none;
+    top: -0.75rem; /* Move label above the input field */
+    background-color: white; /* Ensure label background overlaps input border */
+    padding: 0 4px; /* Padding around the label text */
+  }
+  
+  .input {
+    @apply w-full pl-10 py-2 border border-gray-300 rounded-lg text-sm;
+    @apply focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500;
+  }
+  
+  .input:focus ~ .label,
+  .input:not(:placeholder-shown) ~ .label {
+    @apply text-xs text-blue-500;
+    top: -0.75rem; /* Maintain position above the input field */
+    left: 10px; /* Slightly adjust position to align with input field */
+  }
+  
+  .icon {
+    @apply absolute left-3 text-gray-400 w-4 h-4;
+    stroke-width: 1.5;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .passwordToggle {
+    @apply absolute right-3 bg-transparent border-none cursor-pointer focus:outline-none;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .eyeIcon {
+    @apply text-gray-400 w-4 h-4;
+    stroke-width: 1.5;
+  }
+  
+  .loginButton {
+    @apply w-full bg-blue-500 text-white py-2 rounded-lg mt-4 transition-colors flex items-center justify-center;
+    @apply hover:bg-blue-600 disabled:bg-gray-300 disabled:cursor-not-allowed;
+  }
+  
+  .loginIcon {
+    @apply ml-2 w-4 h-4;
+    stroke-width: 1.5;
+  }
+  
+  .footer {
+    @apply text-gray-500 text-xs mt-6;
+    font-size: 12px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
