@@ -1,0 +1,58 @@
+.container {
+    @apply flex items-center justify-center min-h-screen bg-black;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg p-8 shadow-lg text-center w-80 flex flex-col relative;
+  }
+  
+  .title {
+    @apply text-2xl font-bold mb-2;
+  }
+  
+  .subtitle {
+    @apply text-gray-600 mb-6;
+  }
+  
+  .form {
+    @apply flex flex-col;
+  }
+  
+  .inputContainer {
+    @apply relative mb-6;
+  }
+  
+  .label {
+    @apply absolute left-3 text-gray-400 text-sm transition-all transform origin-left pointer-events-none;
+    top: -0.75rem;
+    background-color: white;
+    padding: 0 4px;
+  }
+  
+  .input {
+    @apply w-full pl-10 py-2 border border-gray-300 rounded-lg text-sm;
+    @apply focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500;
+  }
+  
+  .input:focus ~ .label,
+  .input:not(:placeholder-shown) ~ .label {
+    @apply text-xs text-blue-500;
+    top: -0.75rem;
+    left: 10px;
+  }
+  
+  .icon {
+    @apply absolute left-3 text-gray-400 w-4 h-4;
+    stroke-width: 1.5;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .signUpButton {
+    @apply w-full bg-blue-500 text-white py-2 rounded-lg mt-4 transition-colors flex items-center justify-center;
+    @apply hover:bg-blue-600;
+  }
+  
+  .backToLogin {
+    @apply mt-4 text-blue-500 hover:text-blue-700 text-sm;
+  }

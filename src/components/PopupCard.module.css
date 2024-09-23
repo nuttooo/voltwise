@@ -1,0 +1,43 @@
+.overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+}
+
+.popupCard {
+  @apply bg-white rounded-lg shadow-lg p-8 text-center;
+  @apply max-w-sm mx-auto;
+  @apply flex flex-col items-center;
+  @apply transition-transform transform scale-100;
+}
+
+.success {
+  @apply border-2 border-green-200 bg-green-50;
+}
+
+.error {
+  @apply border-2 border-red-200 bg-red-50;
+}
+
+.icon {
+  @apply w-12 h-12 mb-4;
+}
+
+.title {
+  @apply text-lg font-semibold mb-2;
+}
+
+.message {
+  @apply text-gray-600 mb-6;
+}
+
+.button {
+  @apply w-full py-2 rounded-lg text-white;
+  @apply transition-colors;
+}
+
+.success .button {
+  @apply bg-green-500 hover:bg-green-600;
+}
+
+.error .button {
+  @apply bg-red-500 hover:bg-red-600;
+}

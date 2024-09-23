@@ -1,0 +1,19 @@
+.container {
+    @apply flex items-center justify-center min-h-screen bg-black;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg p-8 shadow-lg text-center w-80 flex flex-col relative;
+  }
+  
+  .title {
+    @apply text-2xl font-bold mb-2;
+  }
+  
+  .error {
+    @apply text-red-500 mb-4;
+  }
+  
+  .backToLogin {
+    @apply mt-4 text-blue-500 hover:text-blue-700 text-sm;
+  }
